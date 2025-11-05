@@ -3,12 +3,11 @@
   become: yes
   tasks:
    - name: Install Apache HTTPD
-  yum:
-    name: httpd
-    state: present
-
-  - name: Start and enable HTTPD service
-  service:
-     name: httpd
-     state: started
-     enabled: yes
+     yum:
+       name: httpd
+       state: present
+   - name: Start and enable HTTPD service
+     service:
+       name: httpd
+       state: started
+       enabled: yes
